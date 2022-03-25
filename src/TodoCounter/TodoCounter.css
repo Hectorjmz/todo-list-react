@@ -1,0 +1,10 @@
+.TodoCounter {
+    display: flex;
+    width: 100%;
+    height: 65px;
+    background-color: aquamarine;
+    background: linear-gradient(100.68deg, rgba(119, 185, 245, 0.63) 9.46%, #1C88ED 104.64%);
+    border-radius: 0px 0px 10px 10px;
+    justify-content: center;
+    align-items: center;
+}
