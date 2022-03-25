@@ -3,31 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { AppUI } from './AppUI';
 
 
-// const defaultTodos = [
-//   {
-//     text: 'Cortar cebolla', 
-//     completed: false
-//   },
-//   {
-//     text: 'Tomar curso React', 
-//     completed: false
-//   },
-//   {
-//     text: 'Llorar con la chisquiada', 
-//     completed: true
-//   },
-//   {
-//     text: 'Llorar con la llorona', 
-//     completed: false
-//   },
-// ]
-
-
 function useLocalStorage(itemName, initialValue){
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(true)
   const [item, setItem] = useState(initialValue)
-
 
   useEffect(()=>{
     
@@ -52,8 +31,6 @@ function useLocalStorage(itemName, initialValue){
     }, 1000);
   });
 
-  
-
 
   const saveItem = (newItem) => {
     try{
@@ -70,14 +47,16 @@ function useLocalStorage(itemName, initialValue){
     saveItem, 
     loading,
     error,
+  }
 }
-
-}
-
 
 
 function App() {
-  const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage('TODOS_V1', [])
+  const {
+    item: todos, 
+    saveItem: saveTodos, 
+    loading, error
+  } = useLocalStorage('TODOS_V1', [])
   
   const [searchValue, setSearchValue] = useState("")
 
@@ -137,3 +116,27 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+// const defaultTodos = [
+//   {
+//     text: 'Cortar cebolla', 
+//     completed: false
+//   },
+//   {
+//     text: 'Tomar curso React', 
+//     completed: false
+//   },
+//   {
+//     text: 'Llorar con la chisquiada', 
+//     completed: true
+//   },
+//   {
+//     text: 'Llorar con la llorona', 
+//     completed: false
+//   },
+// ]
