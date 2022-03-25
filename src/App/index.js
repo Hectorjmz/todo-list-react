@@ -62,11 +62,9 @@ function App() {
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
-  // console.log(loading)
 
 
   let searchedTodos = [];
- //! down
   if(!searchValue.length >= 1){
     searchedTodos = todos
   } else {
